@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('title','登録済みニュースの一覧'）
+@section('title','登録済みニュースの一覧')
 @section('content')
    <div class="container">
        <div class="row">
@@ -46,6 +46,12 @@
                          <th>{{ $news->id}}</th>
                          <td>{{\Str::limit($news->title,100)}}</td>
                          <td>{{\Str::limit($news->body,250)}}</td>
+                         <td>
+                             <div>
+                                 <a href="{{ action('Admin\NewsController@edit', ['id' => $news->id]) }}">
+                                     編集</a>
+                             </div>
+                         </td>
                        </tr>
                      @endforeach    
                    </tbody>

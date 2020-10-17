@@ -10,7 +10,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 mx-auto">
-                    <h1>プロフィール編集</h1>
+                    <h1>プロフィール作成</h1>
                     <!--Admin\ProfileController の create Action に指定-->
                     <form action="{{action('Admin\ProfileController@create')}}" 
                     method="post" enctype="multipart/form-data">
@@ -61,6 +61,3 @@
             </div>
         </div>
         @endsection
-        
-    </body>
-</html>

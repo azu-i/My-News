@@ -1,12 +1,7 @@
-
-        
-        {{-- layouts/admin.blade.phpを読み込む --}}
         @extends('layouts.admin')
         
-        {{-- admin.blade.phpの@yield('title')に'ニュースの新規作成'を埋め込む --}}
         @section('title', 'ニュースの新規作成')
         
-        {{-- admin.blade.phpの@yield('content')に以下のタグを埋め込む --}}
         @section('content')
         <div class="container">
             <div class="row">
@@ -44,7 +39,7 @@
                            </div>
                            
                        </div>
-                       {{ csrf_field() }}
+                       {{ csrf_field()}}
                        <input type="submit" class="btn btn-primary" value="更新">
                         
                     </form>
@@ -52,5 +47,3 @@
             </div>
         </div>
         @endsection
-    </body>
-</html>

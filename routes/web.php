@@ -22,6 +22,7 @@ Route::group(['prefix'=>'admin'],function(){
      Route::post('profile/create','Admin\ProfileController@create');
      Route::get('profile/edit', 'Admin\ProfileController@add')->middleware('auth');
      Route::post('profile/edit','Admin\ProfileController@update');
+     Route::get('news', 'Admin\NewsController@index')->middleware('auth'); 
 });
 
 

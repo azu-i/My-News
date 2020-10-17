@@ -49,6 +49,16 @@ class NewsController extends Controller
        }
        return view('admin.news.index', ['posts' => $posts, 'cond_title' => $cond_title]);
     }
+    public function edit(Request $request){
+        $news=News::find($request->id);
+        if(empty($news)){
+            abort(404);
+        }
+        return view('admin.news.edit',['news_form'=>$news]);
+    }
+    public function update(Request $request){
+        
+    }
 }
 
 

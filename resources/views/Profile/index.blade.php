@@ -9,28 +9,23 @@
     </div>
     
     <hr color="c0c0c0">
-    <div class="row">
-        <div class="col-md-6">
-           <div class='name'>
-              {{$profile->name}}
-            </div>
-        </div>
-        <hr color="c0c0c0">
-        <div class="col-md-6">
-            {{$profile->gender}}
-        </div>
-        <hr color="c0c0c0">
-        <div class="col-md-10">
-            {{ str_limit($profile->hobby, 100)}}
-        </div>
-        <hr color="c0c0c0">
-        <div class="col-md-10">
-            {{ str_limit($profile->introduction, 150)}}
-        </div>
-        <hr color="c0c0c0">
-    </div>
-    
-    
+    <table class="table table-striped">
+        <tr>
+            <th>名前</th>
+            <th>性別</th>
+            <th>趣味</th>
+            <th>自己紹介</th>
+        </tr>
+        @foreach($profiles as $profile)
+        <tr> 
+             <td>{{$profile->name}}</td>
+             <td>{{$profile->gender}}</td>
+             <td>{{ str_limit($profile->hobby, 100)}}</td>
+             <td>{{ str_limit($profile->introduction, 150)}}</td>
+        </tr>
+                 
+        @endforeach
+    </table>
 </div>
 
 

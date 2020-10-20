@@ -10,7 +10,7 @@ class ProfileController extends Controller
 {
     //
     public function index(Request $request){
-        $profile = Profile::all()->sortByDesc('updated_at');
+        $profiles = Profile::all()->sortByDesc('updated_at');
         
         //  if (count($profile) > 0) {
         //     $headline = $profile->shift();
@@ -18,6 +18,6 @@ class ProfileController extends Controller
         //     $headline = null;
         
         // }
-        return view('Profile.index', ['profile' => $profile]);
+        return view('Profile.index', ['profiles' => $profiles]);
     }
 }
